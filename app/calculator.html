@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="calculator.js"></script>
+    <title>Uncle Tom's retail calculator</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron col-8 offset-2">
+      <h1>Retail calculator</h1>
+    </div>
+    <div class="container">
+      
+      <form oninput="update()" id="main_form" class="" action="#" method="post" name="" accept-charset="utf-8">
+          
+        <div class="container row justify-content-center">
+          <div class="col-4">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="count-label">Total</span>
+              </div>
+                <input requried class="form-control" type="number" min="0" name="count" id="count" aria-label="Total" aria-describedby="count-label">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="price-label">Price</span>
+              </div>
+              <input required class="form-control" type="number" min="0" name="price" id="price" aria-label="Price" aria-describedby="price-label"> 
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="state_code-label">State code</span>
+              </div>
+              <select required class="form-control" id="state_code" name="state_code" aria-label="State code" aria-describedby="state_code-label">
+                <option value="">Pick the state...</option>
+                <option value="0.0685">UT - 6.85%</option>
+                <option value="0.08">NV - 8%</option>
+                <option value="0.0625">TX - 6.25%</option>
+                <option value="0.04">AL - 4%</option>
+                <option value="0.0825">CA - 8.25%</option>
+              </select>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="result-label">Total Order Price</span>
+              </div>
+              <input disabled class="form-control" type="text" id="result" name="result" aria-label="Total Order Price" aria-describedby="result-label">
+              </div>
+                <div class="d-flex justify-content-center">
+                <div id="spinner" class="spinner-grow text-center text-success" hidden aria-hidden="true" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+          </div>
+          <div class="col-3">
+            <ul class="list-group text-center">
+              <li class="list-group-item">Discount</li>
+              <li class="list-group-item" id="discount_50000">15% @ 50K+</li>
+              <li class="list-group-item" id="discount_10000">10% @ 10K+</li>
+              <li class="list-group-item" id="discount_7000">7% @ 7K+</li>
+              <li class="list-group-item" id="discount_5000">5% @ 5K+</li>
+              <li class="list-group-item" id="discount_1000">3% @ 1K+</li>
+            </ul>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
